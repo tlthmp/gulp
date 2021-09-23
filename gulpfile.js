@@ -8,11 +8,9 @@ var clean = require('gulp-clean');
 
 const eslint = require('gulp-eslint');
 
-const pitchfx = require('baseball-pitchfx-3d');
-const pitchtype = require('baseball-pitchfx-types');
 
 
-var glm = require('gl-matrix');
+
 
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
@@ -49,10 +47,8 @@ var watchPaths        = {
     html:          [
         srcPath+'**/*.html',
         srcPath+'**/*.php'
-    ],
-    baseball:   [
-       nodePath + 'basebaseball-pitchfx-3d'
     ]
+   
     
 };
 
@@ -134,18 +130,6 @@ function runLinter(cb) {
 exports.lint = runLinter;
 
 
-//load baseball libraries
-//C:\Users\dev\home\tlthmp\node_modules\baseball-pitchfx-3d
-// gulp.task('js', function() {
-//   return gulp.src(
-//        pitchfx,pitchtype,
-//         {base:'node_modules'}
-
-//       )
-//       .pipe(gulp.dest(bases.dist))
-//       .pipe(browserSync.stream());
-
-//     });
 
 
 // Logs Message
